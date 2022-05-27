@@ -7,13 +7,26 @@
   - Useful tools
   - Very easy problem bank
 - Week 1
+  - Leetcode Easy (brute force solution)
 - Week 2
+  - BigO Notation
 - Week 3
+  - Data Structures Part 1
+     - Arrays
+     - Hash Maps
+     - Stacks and Queues
 - Week 4
+  - Data Strucuture Part 2
 - Week 5
+  - Patterns: Searches, Sorting and Pattern Matching
 - Week 6
+  - Patterns: Two pointer
 - Week 7
+  - Patterns: Merge Interval
 - Week 8
+  - Patterns: Tree Sort
+- Week 9 
+  - Object Oriented Design
 
 
 ## The Secret to Solving Any Problem

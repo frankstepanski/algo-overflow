@@ -1,3 +1,21 @@
+# Algo Overflow
+
+- Week 0 (Prep)
+  - Understanding Imposter Syndrome
+  - Pair Programming Tips
+  - How to ask good questions
+  - Useful tools
+  - Very easy problem bank
+- Week 1
+- Week 2
+- Week 3
+- Week 4
+- Week 5
+- Week 6
+- Week 7
+- Week 8
+
+
 ## The Secret to Solving Any Problem
 
 - Understand the problem

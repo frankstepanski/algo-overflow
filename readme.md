@@ -32,7 +32,7 @@
   - Object Oriented Design
 
 
-## The Secret to Solving Any Problem
+### The Secret to Solving Any Problem
 
 - Understand the problem
 - Make a plan

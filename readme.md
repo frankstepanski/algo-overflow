@@ -10,13 +10,16 @@
   - Leetcode Easy (brute force solution)
 - Week 2
   - BigO Notation
+  - Recursion
 - Week 3
   - Data Structures Part 1
      - Arrays
      - Hash Maps
      - Stacks and Queues
+     - Linked Lists
 - Week 4
-  - Data Strucuture Part 2
+  - Data Structure Part 2
+     - Trees
 - Week 5
   - Patterns: Searches, Sorting and Pattern Matching
 - Week 6

@@ -1,11 +1,3 @@
-# LeetCode Solutions
-
-| Date             | LeetCode Problem | Source link | Data Structure / Pattern | Difficulty | Notes
-|------------------|------------------| -------------------------|------------|-------------|------|
-|                  |                  |             |            |            |             |      |
-
-
-
 ## The Secret to Solving Any Problem
 
 - Understand the problem

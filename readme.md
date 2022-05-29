@@ -8,9 +8,17 @@
   - Very easy problem bank
 - Week 1
   - Leetcode Easy (brute force solution)
+    - Sum Digits
+    - Reverse String
+    - Valid Anagram
+    - Valid Palindrome
+    - Two Sum
+    - Maximum Subarray
+    - Contains Duplicates
 - Week 2
   - BigO Notation
   - Recursion
+  - Caching (Memoization)
 - Week 3
   - Data Structures Part 1
      - Arrays
@@ -20,10 +28,19 @@
 - Week 4
   - Data Structure Part 2
      - Trees
+       - Depth-first search
+       - Breadth-first search
 - Week 5
   - Patterns: Searches, Sorting and Pattern Matching
+    - Binary search
+    - Bubble sort
+    - Merge sort
+    - Quick sort
 - Week 6
-  - Patterns: Two pointer
+  - Patterns: Sliding Window
+    - Two pointers
+    - Fast and Slow pointers
+    - 
 - Week 7
   - Patterns: Merge Interval
 - Week 8

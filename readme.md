@@ -40,7 +40,6 @@
   - Patterns: Sliding Window
     - Two pointers
     - Fast and Slow pointers
-    - 
 - Week 7
   - Patterns: Merge Interval
 - Week 8

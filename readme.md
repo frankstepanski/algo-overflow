@@ -38,7 +38,6 @@
          - Remove Duplicates from Sorted List
          - Delete Node in Linked List
          - Remove Linked List Elements
-         - 
 - Week 4
   - Data Structure Part 2
      - Trees

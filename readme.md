@@ -5,16 +5,20 @@
   - Pair Programming Tips
   - How to ask good questions
   - Useful tools
-  - Very easy problem bank
+  - Steps to Solve Any Problem
+  - Very easy problems
 - Week 1
   - Leetcode Easy (brute force solution)
+    - Fizz Buzz
     - Sum Digits
     - Reverse String
     - Valid Anagram
     - Valid Palindrome
     - Two Sum
-    - Maximum Subarray
-    - Contains Duplicates
+    - Contains Duplicate
+    - Missing Number
+    - Climbing Stairs
+    - Roman To Integer
 - Week 2
   - BigO Notation
   - Recursion
@@ -25,12 +29,29 @@
      - Arrays
      - Hash Maps
      - Stacks and Queues
+       - Problems:
+         - Valid Parentheses
+         - Min Stack
      - Linked Lists
+       - Problems:
+         - Reverse Linked List
+         - Remove Duplicates from Sorted List
+         - Delete Node in Linked List
+         - Remove Linked List Elements
+         - 
 - Week 4
   - Data Structure Part 2
      - Trees
        - Depth-first search (DFS)
        - Breadth-first search (BFS)
+       - Problems:
+         - Maximum Depth
+         - Closest BST Value
+         - Lowest Common Ancestor of a BST
+         - Binary Tree Inorder Traversal
+         - Invert Binary Tree
+         - Balanced Binary Tree
+         - Validate BST (medium)
 - Week 5
   - Patterns: Searches, Sorting and Pattern Matching
     - Binary search

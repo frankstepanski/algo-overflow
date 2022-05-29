@@ -28,8 +28,8 @@
 - Week 4
   - Data Structure Part 2
      - Trees
-       - Depth-first search
-       - Breadth-first search
+       - Depth-first search (DFS)
+       - Breadth-first search (BFS)
 - Week 5
   - Patterns: Searches, Sorting and Pattern Matching
     - Binary search

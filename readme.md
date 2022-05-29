@@ -18,6 +18,7 @@
 - Week 2
   - BigO Notation
   - Recursion
+    - Tail vs non-tail 
   - Caching (Memoization)
 - Week 3
   - Data Structures Part 1

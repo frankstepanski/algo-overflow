@@ -39,7 +39,7 @@
          - Delete Node in Linked List
          - Remove Linked List Elements
 - Week 4
-  - Data Structure Part 2
+  - Data Structures Part 2
      - Trees
        - Depth-first search (DFS)
        - Breadth-first search (BFS)

@@ -6,7 +6,7 @@
   - How to ask good questions
   - Useful tools
   - Steps to Solve Any Problem
-  - Very easy problems
+  - Warm-up problems
 - Week 1
   - Leetcode Easy (brute force solution)
     - Fizz Buzz
@@ -64,8 +64,9 @@
 - Week 7
   - Patterns: Merge Interval
 - Week 8
-  - Patterns: Tree Sort
+
 - Week 9 
   - Object Oriented Design
+  - System Design
 
 

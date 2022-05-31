@@ -32,10 +32,6 @@
   - Data Structures Part 1
      - Arrays
      - Hash Maps
-     - Stacks and Queues
-       - Problems:
-         - Valid Parentheses
-         - Min Stack
      - Linked Lists
        - Problems:
          - Palindrome Linked List
@@ -45,6 +41,7 @@
          - Remove Duplicates from Sorted List
          - Delete Node in Linked List
          - Remove Linked List Elements (recursion)
+     - Stacks and Queues
 - Week 4
   - Data Structures Part 2
      - Trees

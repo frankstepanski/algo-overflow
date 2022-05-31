@@ -73,9 +73,13 @@
       - Sort List
     - Quick sort
 - Week 6
-  - Patterns: Sliding Window
-    - Two pointers
+    - Two Pointers
+      - Reverse String
       - Valid Palindrome II
+      - Rotate Array
+      - Move Zeroes
+      - Two Sum II
+      - Middle of Linked List
     - Fast and Slow pointers
 - Week 7
   - Leetcode medium

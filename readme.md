@@ -19,10 +19,14 @@
     - Missing Number
     - Climbing Stairs
     - Roman To Integer
+    - Maximum Subarray
+    - Best Time to Buy and Sell Stock
 - Week 2
   - BigO Notation
   - Recursion
-    - Tail vs non-tail 
+    - Reverse String
+    - Fibonacci Number
+    - Power of Two
   - Caching (Memoization)
 - Week 3
   - Data Structures Part 1
@@ -34,12 +38,13 @@
          - Min Stack
      - Linked Lists
        - Problems:
+         - Palindrome Linked List
          - Reverse Linked List
          - Linked List Cycle
-         - Merge Two Sorted Lists
+         - Merge Two Sorted Lists (recursion)
          - Remove Duplicates from Sorted List
          - Delete Node in Linked List
-         - Remove Linked List Elements
+         - Remove Linked List Elements (recursion)
 - Week 4
   - Data Structures Part 2
      - Trees
@@ -55,26 +60,45 @@
          - Validate BST (medium)
 - Week 5
   - Patterns: Searches, Sorting and Pattern Matching
-    - Binary search
-    - Bubble sort
+    - Binary search (sorted items only)
+      - Guess Number Higher or Lower
+      - Search Insert Position
+      - Peak Index in a Mountain Array
+      - Find Distance Value Between Two Arrays
+      - Find Smallest Letter Greater than Target
+      - First Bad Version
+      - Arranging Coins
+      - Count Negative Numbers in a Sorted Matrix
     - Merge sort
+      - Sort List
     - Quick sort
 - Week 6
   - Patterns: Sliding Window
     - Two pointers
+      - Valid Palindrome II
     - Fast and Slow pointers
 - Week 7
   - Leetcode medium
     - Valid Sudoku
     - Number of Islands
     - Shortest Path in Binary Matrix
+    - Rotate Image
     - Game of Life
     - Word Search
     - Sum of Two Integers
     - Spiral Matrix
-    - 
+    - Add Two Numbers (recursion)
+    - Reorder List
+    - 3Sum
+    - Container with Most Water
 - Week 8
-
+  - Dynamic Programming
+    - Best Time to Buy and Sell Stock
+    - Maximum Subarray
+    - Generate Parentheses
+    - Champagne Tower
+    - Coin Change
+    - Word Break
 - Week 9 
   - Object Oriented Design
   - System Design

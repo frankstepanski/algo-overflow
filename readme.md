@@ -8,13 +8,13 @@
   - Steps to Solve Any Problem
   - Warm-up problems
 - Week 1
-  - Leetcode Easy (brute force solution)
-    - Fizz Buzz
-    - Sum Digits
-    - Reverse String
-    - Valid Anagram
-    - Valid Palindrome
-    - Two Sum
+  - Leetcode Easy 
+    - Fizz Buzz 
+    - Sum Digits 
+    - Reverse String 
+    - Valid Anagram 
+    - Valid Palindrome 
+    - Two Sum 
     - Contains Duplicate
     - Missing Number
     - Climbing Stairs
@@ -35,6 +35,8 @@
      - Linked Lists
        - Problems:
          - Reverse Linked List
+         - Linked List Cycle
+         - Merge Two Sorted Lists
          - Remove Duplicates from Sorted List
          - Delete Node in Linked List
          - Remove Linked List Elements
@@ -62,7 +64,15 @@
     - Two pointers
     - Fast and Slow pointers
 - Week 7
-  - Patterns: Merge Interval
+  - Leetcode medium
+    - Valid Sudoku
+    - Number of Islands
+    - Shortest Path in Binary Matrix
+    - Game of Life
+    - Word Search
+    - Sum of Two Integers
+    - Spiral Matrix
+    - 
 - Week 8
 
 - Week 9 

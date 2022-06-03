@@ -39,8 +39,6 @@
          - Linked List Cycle
          - Merge Two Sorted Lists (recursion)
          - Remove Duplicates from Sorted List
-         - Delete Node in Linked List
-         - Remove Linked List Elements (recursion)
      - Stacks and Queues
 - Week 4
   - Data Structures Part 2

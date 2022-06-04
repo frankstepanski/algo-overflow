@@ -6,7 +6,13 @@
   - How to ask good questions
   - Useful tools
   - Steps to Solve Any Problem
-  - Warm-up problems
+  - Algorithms
+    - Working with strings and arrays
+    - Using 'helper' functions
+    - Iterating through objects
+    - Nested Arrays
+    - Objects - dynamic key/value pairs
+    - Callbacks and higher order functions
 - Week 1
   - Leetcode Easy 
     - Fizz Buzz 

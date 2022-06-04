@@ -1,4 +1,4 @@
-import { maxValue, evenNumbers, factorsOf } from "../1-very-easy";
+import { maxValue, evenNumbers, factorsOf } from "../0-prep";
 
 it('maxValue - return max value from array', () => {
     expect(maxValue([1,2,3,4,5])).toBe(5); 

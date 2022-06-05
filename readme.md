@@ -29,11 +29,15 @@
     - Best Time to Buy and Sell Stock
 - Week 2
   - BigO Notation
+  - White-Boarding Tips
   - Recursion
     - Reverse String
     - Fibonacci Number
     - Power of Two
+  - Recursive Backtracking
   - Caching (Memoization)
+    - Climbing Stairs
+
 - Week 3
   - Data Structures Part 1
      - Arrays
@@ -63,25 +67,32 @@
      - Trees
        - Depth-first search (DFS)
        - Breadth-first search (BFS)
-       - Problems:
-         - Maximum Depth
-         - Closest BST Value
-         - Lowest Common Ancestor of a BST
-         - Binary Tree Inorder Traversal
+       - Problems (Leetcode):
+         - Same Tree 
+         - Preorder Traversal
+         - Inorder Traversal
+         - Postorder Traversal
+         - Level Order Traversal
+         - Maximum Depth 
+         - Symmetric Tree
          - Invert Binary Tree
-         - Balanced Binary Tree
-         - Validate BST (medium)
+         - Path Sum
+         - Closest BST Value
+         - Search in a BST
+         - Validate BST
+         - Lowest Common Ancestor of a BST
 
 - Week 6 
   - Sorting
     - Bubble Sort
-    - Insertion Sort
-    - Merge Sort
-    - Quick Sort
     - Selection Sort
+    - Merge Sort
+    - Insertion Sort
+    - Quick Sort
+
 
 - Week 7
-    - Two Pointers
+    - Pointers and Windows
       - Reverse String
       - Valid Palindrome II
       - Rotate Array

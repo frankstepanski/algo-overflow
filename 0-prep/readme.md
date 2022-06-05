@@ -13,6 +13,6 @@
 - [Frontend Refresher](https://www.youtube.com/channel/UCGiRSHBdWuCgjgmPPz_13xw/videos)
  - [Advanced Git](https://github.com/nnja/advanced-git/blob/master/presentation/slides.pdf)
  - [Software Engineer Tips Playlist](https://www.youtube.com/playlist?list=PL1hNTJtl-Vt5FGkgnfo3e0HjK-YPYCQzR)
-
+- [Mentally Preparing for Tech Interview](https://www.youtube.com/watch?v=LSLyly2GJo4)
 
 

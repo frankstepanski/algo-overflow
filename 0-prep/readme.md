@@ -1,1 +1,18 @@
-# Prep
+## Prep
+
+
+
+
+
+## Resources
+
+- [Pair Programming](https://shopify.engineering/pair-programming-explained)
+- [Dealing with Imposter Syndrome](https://www.youtube.com/watch?v=pXnoXaMIZHs)
+- [Eye Strain Exercise](https://www.youtube.com/watch?v=rPfCtJ1PX9I)
+- [code-fi beats](https://www.youtube.com/watch?v=n61ULEU7CO0)
+- [Frontend Refresher](https://www.youtube.com/channel/UCGiRSHBdWuCgjgmPPz_13xw/videos)
+ - [Advanced Git](https://github.com/nnja/advanced-git/blob/master/presentation/slides.pdf)
+ - [Software Engineer Tips Playlist](https://www.youtube.com/playlist?list=PL1hNTJtl-Vt5FGkgnfo3e0HjK-YPYCQzR)
+
+
+

@@ -1,6 +1,7 @@
 # Algo Overflow
 
 - Week 0 (Prep)
+  - Frontend Refresher Resources
   - Understanding Imposter Syndrome
   - Pair Programming Tips
   - How to ask good questions

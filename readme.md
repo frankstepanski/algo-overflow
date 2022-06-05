@@ -46,7 +46,19 @@
          - Merge Two Sorted Lists (recursion)
          - Remove Duplicates from Sorted List
      - Stacks and Queues
+
 - Week 4
+  - Binary search 
+      - Guess Number Higher or Lower
+      - Search Insert Position
+      - Peak Index in a Mountain Array
+      - Find Distance Value Between Two Arrays
+      - Find Smallest Letter Greater than Target
+      - First Bad Version
+      - Arranging Coins
+      - Count Negative Numbers in a Sorted Matrix
+
+- Week 5
   - Data Structures Part 2
      - Trees
        - Depth-first search (DFS)
@@ -59,21 +71,16 @@
          - Invert Binary Tree
          - Balanced Binary Tree
          - Validate BST (medium)
-- Week 5
-  - Patterns: Searches, Sorting and Pattern Matching
-    - Binary search (sorted items only)
-      - Guess Number Higher or Lower
-      - Search Insert Position
-      - Peak Index in a Mountain Array
-      - Find Distance Value Between Two Arrays
-      - Find Smallest Letter Greater than Target
-      - First Bad Version
-      - Arranging Coins
-      - Count Negative Numbers in a Sorted Matrix
-    - Merge sort
-      - Sort List
-    - Quick sort
-- Week 6
+
+- Week 6 
+  - Sorting
+    - Bubble Sort
+    - Insertion Sort
+    - Merge Sort
+    - Quick Sort
+    - Selection Sort
+
+- Week 7
     - Two Pointers
       - Reverse String
       - Valid Palindrome II

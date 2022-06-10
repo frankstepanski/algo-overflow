@@ -125,6 +125,5 @@
     - Word Break
 - Week 9 
   - Object Oriented Design
-  - System Design
 
 

@@ -1,11 +1,8 @@
 /*
-
-Write a function, maxValue, that takes in array of numbers as an argument.
+maxValue(nums)
+Write a function that takes in array of numbers as an argument.
 The function should return the largest number in the array.
 Solve this without using any built-in array methods.
-
-edge cases: empty array, single value array
-
 */
 
 export const maxValue = (nums) => {
@@ -18,24 +15,118 @@ export const maxValue = (nums) => {
   return largest;
 };
 
-
 /*
-
-Write a function evenNumbers(max) that takes in a number as an arg. 
-The function should return an array containing all positive, even numbers 
-that are less than max.
-
-edge cases: max is 0, max is negative
+isPrime(number)
+Define a function that returns true if number is prime. 
+Otherwise, false. A number is prime if it is only divisible by 1 and itself.
+1 is not a prime number.
+Prime numbers: 2, 3, 5, 7, 11, 13, ...
+Hint: A modulus remainder (remainder after division) NOT equal to 0 means it is a prime number.
 */
 
-export const evenNumbers = (max) => {
-  let arr = [];
-  
-  for (let i=0; i < max; i++) {
-    if (i % 2 === 0) arr.push(i);
+export const isPrime = (num) => {
+
+  if (num < 2) {
+    return false;
   }
-  
-  return arr;
+
+  for (let i = 2; i < num; i++) {
+    // no remainder before the number means it is not a prime number
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+
+  /*
+  let i = 2;
+  while (i < num) {
+    if (num % i === 0) {
+      return false;
+    }
+    i++;
+  }
+  */
+
+}
+
+/*
+choosePrimes(num)
+Write a function that takes in an array of numbers as args. 
+The function should return a new array containing the primes from the original array. 
+Hint: Use the isPrime function you wrote earlier.
+*/
+
+export const choosePrimes = (nums) => {
+
+  if (!Array.isArray(nums)) return null;
+  if (nums.length === 0) return [];
+
+  const primes = nums.filter(num => {
+      if (isPrime(num)) {
+        return num;
+      }
+   })
+
+  return primes;
+}
+
+/*
+mostVowels(sentence)
+Write a function that takes in a sentence string and returns the word of the sentence
+that contains the most vowels. 
+Do not use the built-in .split() method.
+Use a helper function to count the vowels in a word.
+*/
+
+export const mostVowels = (sentence) => {
+
+  if (!sentence) return null;
+  if (typeof sentence !== 'string') return null;
+
+  let counts = {};
+  let word = '';
+  let largestWord = '';
+  let max = 0;
+
+  for (let i = 0; i < sentence.length; i++) {
+      if (sentence[i] === ' ') {
+          if (counts[word] === undefined) {
+              counts[word] = _countVowels(word);
+          }
+          word = '';
+      } else {
+          word += sentence[i];
+      }
+  }
+
+  // last word
+  if (counts[word] === undefined) {
+      counts[word] = _countVowels(word);
+  }
+
+  for (word in counts) {
+      if (counts[word] > max) {
+          max = counts[word];
+          largestWord = word;
+      }
+  }
+
+  return largestWord;
+}
+
+const _countVowels = (word) => {
+
+  let count = 0;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 /*
@@ -135,48 +226,6 @@ function prime(num) {
   return true;
 }
 
-
-/*
-
-Write a function mostVowels that takes in a sentence string and returns
-the word of the sentence that contains the most vowels.
-
-*/
-
-function mostVowels(sentence) {
-  let counts = {};
-  let words = sentence.split(" ");
-
-  for (let i = 0; i < words.length; i++) {
-      let word = words[i];
-      counts[word] = countVowels(word);
-  }
-
-  let largestNum = 0;
-  let largestWord = "";
-
-  for (key in counts) {
-      if (counts[key] > largestNum) {
-          largestNum = counts[key];
-          largestWord = key;
-      }
-  }
-
-  return largestWord;
-}
-
-function countVowels(word) {
-  let count = 0;
-  let vowels ="aeiou";
-
-  for (let i = 0; i < word.length; i++) {
-      if (vowels.includes(word[i])) {
-          count++;
-      }
-  }
-
-  return count;
-}
 
 /*
 

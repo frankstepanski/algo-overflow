@@ -1,4 +1,119 @@
 /*
+map(array, callback)
+
+Create a function that takes two arguments: an array and a callback.
+The function will execte the callback on every element of the array.
+The callback should return a new array with the result of the callback.
+Note: the callback can be as simple as adding two arguments together.
+*** Do not use the native map or forEach method ***
+*/        
+  
+export const map = (arr, cb) => {
+
+    if (arr.length === 0) return null;
+  
+    const _arr = [];
+  
+    for( let i = 0; i < arr.length; i++) {
+      _arr.push(cb(arr[i]));
+    }
+    
+    return _arr;
+}
+
+/*
+reduce(arr, callback, initVal)
+Create a function that takes an array and reduces the elements to a single value.
+The function loops through the array and applies the callback function to each element.
+
+The function has an "accumulator value" that keeps track of the accumulated output
+of each loop. It starts out equal to the 3rd argument or first value in passed array.
+  - array is iterated over passing accumulator and next array element as arguments to callback.
+  - callback's return value becomes the new accumulator value.
+  - next loop executes with this new accumulator value.
+
+*** Do not use the native reduce method ***
+  
+  Example: 
+  const nums = [4, 1, 3];
+  const add = function(a, b) { return a + b; }
+  reduce(nums, add, 0); //-> 8
+
+*/
+
+export const reduce = (arr, cb, initVal) => {
+
+  if (Array.isArray(arr) && arr.length !== 0) {
+       let accum;
+       if (initVal === undefined) {
+           accum = arr[0];
+           arr = arr.slice(1); // remove first element
+       } else {
+          accum = initVal;
+       }
+    
+       for (let i = 0; i < arr.length; i++) {
+          accum = cb(accum, arr[i], i, arr);
+       }
+  
+        return accum;
+    } 
+  }
+  
+  const nums = [4, 1, 3];
+  const add = function(a, b) { return a + b; }
+  console.log(reduce(nums, add, 0)); // should log 8
+  
+  /*
+/*
+evaluateObj(obj)
+You are given an object containing several key/value pairs. 
+Add up all the values of properties (whose is a number) and return the total.
+*/
+
+export const evaluateObj = (obj) => {
+
+  if (typeof obj !== 'object') {
+    return null;
+  }
+
+  if (Object.keys(obj).length === 0) {
+    return null;
+  }
+
+  let total = 0;
+
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'number') {
+      total += obj[prop]
+    }
+  }
+
+  return total
+}
+
+/*
+unique(arr)
+Write a function that accepts an array of string or numbers as an argument. 
+The function should return a new array containing elements of the input array,
+without duplicates.
+*/
+
+export const unique = (array) => {
+
+  if (array.length === 0)  return null;
+
+  let uniques = [];
+  for (let i = 0; i < array.length; i++) {
+      let el = array[i];
+      if (!uniques.includes(el)) {
+          uniques.push(el);
+      }
+  }
+  return uniques;
+};
+
+/*
 maxValue(nums)
 Write a function that takes in array of numbers as an argument.
 The function should return the largest number in the array.
@@ -16,12 +131,30 @@ export const maxValue = (nums) => {
 };
 
 /*
+factorsOf(num)
+Write a function that takes in a number as an arg and return an array 
+containing all positive numbers that are able to divide into num with no remainder.
+*/
+
+export const factorsOf = (num) => {
+
+  if (num <= 0) return null;
+
+  let factors = [];
+
+  for (let i = 1; i <= num; i++) {
+      if (num % i === 0) {
+          factors.push(i);
+      }
+  }
+
+  return factors;
+}
+
+/*
 isPrime(number)
 Define a function that returns true if number is prime. 
 Otherwise, false. A number is prime if it is only divisible by 1 and itself.
-1 is not a prime number.
-Prime numbers: 2, 3, 5, 7, 11, 13, ...
-Hint: A modulus remainder (remainder after division) NOT equal to 0 means it is a prime number.
 */
 
 export const isPrime = (num) => {
@@ -37,16 +170,6 @@ export const isPrime = (num) => {
     }
   }
   return true;
-
-  /*
-  let i = 2;
-  while (i < num) {
-    if (num % i === 0) {
-      return false;
-    }
-    i++;
-  }
-  */
 
 }
 
@@ -75,7 +198,7 @@ export const choosePrimes = (nums) => {
 mostVowels(sentence)
 Write a function that takes in a sentence string and returns the word of the sentence
 that contains the most vowels. 
-Do not use the built-in .split() method.
+Do not use the built-in .split() or join() method.
 Use a helper function to count the vowels in a word.
 */
 
@@ -129,385 +252,128 @@ const _countVowels = (word) => {
   return count;
 }
 
-/*
-
-Write a function factorsOf(num) that takes in a number as an arg. 
-The method should return an array containing all positive numbers that 
-are able to divide into num with no remainder.
-
-*/
-
-export const factorsOf = (num) => {
-  let factors = [];
-
-  for (let i = 1; i <= num; i++) {
-      if (num % i === 0) {
-          factors.push(i);
-      }
-  }
-
-  return factors;
-}
-/*
-
-Write a function doubleSequence that accepts a base and a length as arguments.
-The function should return an array representing a sequence that contains
-"length" elements. The first element of the sequence is always the "base",
-the subsequent elements can be generated by doubling the previous element
-of the sequence.
-
-edge cases: length is 0, length is negative
-
-*/
-
-export const doubleSequence = (base, length) => {
-  if (length === 0) {
-      return [];
-  }
-
-  let seq = [base];
-  while (seq.length < length) {
-      let last = seq[seq.length - 1];
-      let next = last * 2;
-      seq.push(next);
-  }
-
-  return seq;
-};
 
 /*
-
-Write a function unique that accepts an array as an argument. 
-The function should return a new array containing elements of the input array,
-without duplicates.
-
-*/
-
-export const unique = (array) => {
-  let uniques = [];
-  for (let i = 0; i < array.length; i++) {
-      let el = array[i];
-      if (!uniques.includes(el)) {
-          uniques.push(el);
-      }
-  }
-  return uniques;
-};
-
-/*
-
-Write a function pickPrimes that takes in an array of numbers and returns
-a new array containing only the prime numbers.
-*/
-
-export const pickPrimes = (array) => {
-  let prime_array = [];
-
-  for (let i = 0; i < array.length; i++) {
-      if (prime(array[i])) {
-          prime_array.push(array[i]);
-      }
-  }
-
-  return prime_array;
-}
-
-function prime(num) {
-  if (num < 2) {
-      return false;
-  }
-
-  for (let i = 2; i < num; i++) {
-      if (num % i === 0) {
-          return false;
-      }
-  }
-
-  return true;
-}
-
-
-/*
-
-Write a function reverseSentence(sentence) that takes in a sentence as an arg.
-The function should return a new sentence where the order of the words is reversed.
+reverseSentence(str)
+Write a function that takes in a sentence string as an arg.
+The function should return a new sentence string where the order of the words is reversed.
 Note that you should reverse the order among words, not the order among characters.
-
+Ignore punctuation (,.!?).
+Do not use the built-in .split(), join() or reverse method.
 */
 
-const reverseSentence = (sentence) =>  {
-  let words = sentence.split(' ');
-  let newWords = [];
+export const reverseSentence = (sentence) =>  {
+  let word = '';
+  let words = []
+  let newSentence = '';
 
-  for (let i = words.length - 1; i >= 0; i--) {
-      newWords.push(words[i]);
+  if (!sentence) return null;
+
+  // split sentence into words and reverse order
+  for (let i = sentence.length - 1; i >= 0; i--) {
+       if (sentence[i] === ' ') {
+            words.push(word);
+            word = '';
+       } else {  
+           // make sure word is not reversed
+          word = sentence[i] + word;
+       }
   }
 
-  let newSentence = newWords.join(' ');
+  // add last word
+  if (word) words.push(word);
+
+  // join words
+  for (let i = 0; i < words.length; i++) {
+    newSentence += words[i];
+    // add space if not last word
+    if (i !== words.length - 1) {
+      newSentence += ' ';
+    }
+  }
+
   return newSentence;
 };
 
+
 /*
-   
+containsWord(sentence, word)
 Write a function containsWord(sentence, targetWord) that accepts two strings as args.
 The function should return a boolean indicating whether the targetWord is found inside
- of the sentence. Solve this without using String's indexOf() or includes() methods.
+of the sentence. Remove punctuation and ignore capitalization.
 
+Solve this without using String's split(), indexOf() or includes() methods.
 */
 
-export const containsWord = (sentence, targetWord) =>{
-  let words = sentence.split(' ');
+export const containsWord = (sentence, targetWord) => {
 
-  for (let i = 0; i < words.length; i++) {
-      let word = words[i];
+  if (!sentence || !targetWord) return null;
 
-      if (word.toLowerCase() === targetWord.toLowerCase()) {
-          return true;
-      }
+  let word = '';
+  let words = [];
+  let ignore = [".", "!", "?"]
+
+  for (let i = 0; i < sentence.length; i++) {
+
+    // end of sentence - with punctuation
+    if (ignore.includes(sentence[i])) {
+       words.push(word)
+       continue;
+    } 
+
+    // end of sentence - without punctuation
+    if (i === (sentence.length - 1)) {
+       word += sentence[i].toLowerCase();
+       words.push(word)
+       continue;
+    }
+
+    // end of word
+    if (sentence[i] === " ") {
+         words.push(word)
+         word = '';
+         continue;
+    } 
+
+    // inside a word
+    word += sentence[i].toLowerCase();
+  }
+
+  if (words.includes(targetWord.toLowerCase())) {
+    return true;
   }
 
   return false;
 };
 
-/*
-
-Write a function snakeToCamel that takes in a snake_cased string and returns
- a PascalCased version of the string. snake_case is where each word is 
- separated with underscores (_). PascalCase is a string where the first
-  char of each word is capital, all other chars lowercase.
-*/
-
-export const snakeToCamel = (str) =>{
-  let words = str.split('_');
-  let newWords = [];
-  for (let i = 0; i < words.length; i++) {
-      let word = words[i];
-      let newWord = word[0].toUpperCase() + word.slice(1).toLowerCase();
-      newWords.push(newWord);
-  }
-  return newWords.join('');
-}
 
 /*
 
-  1- Iterating Objects with a for loop
+7 - Intersection: Use reduce and filter to find the intersection of two arrays.
 
-  Use the Object.values() method to return an array of checkObj's values, 
-  and assign this array to a constant called objToArray. 
-  Next, use a for loop to iterate through objToArray and determine if any
-  of the numbers are divisible by 6. 
-  
-  If so, reassign the value of divBy6 to true.
+Construct a function intersection that compares input arrays and returns a new array 
+with elements found in all of the inputs.
 
-*/
-
-const checkObj = {
-    oddNum: 1,
-    evenNum: 2,
-    foundNum: 5,
-    randomNum: 18
-  };
-  
-  let divBy6 = false;
-  // ADD CODE HERE
-
-  const objToArray = Object.values(checkObj)
-     for (let i=0; i < objToArray.length; i++) {
-       if (objToArray[i] % 6 == 0) {
-       divBy6 = true
-     }
-  }
-
-/*
-
-  2- Nested Arrays
-
-  You are provided with an empty array called nestedArr. Using a for loop starting at 
-  index 0, add 5 subarrays to nestedArr, with each nested array containing the string
-  'loop' concatenated with the corresponding index in nestedArr as its first element,
-  and the index as its second element.
-
-  Example of a subarray: ['loop3', 3].
-
-*/
-
-const nestedArr = [];
-// ADD CODE HERE
-
-for (let i = 0; i < 5; i++) {
-  nestedArr.push([`loop${i}`, i])
-}
-
-/*
-    
-  3- Objects: Adding Properties
-
-  You are provided with an array, possibleIterable. 
-  Using a for loop, build out the object divByThree so that each key is an
-  element of possibleIterable that is divisible by three. 
-  The value of each key should be the array index at which that key can be
-  found in possibleIterable.
-*/
-
-const possibleIterable = [4, 3, 9, 6, 23];
-const divByThree = {};
-// ADD CODE HERE
-
-for (let i = 0; i < possibleIterable.length; i++) {
-  if (possibleIterable[i] % 3 === 0) {
-      divByThree[possibleIterable[i]] = i    
-  }
-}
-
-/*
-
-  4- Objects: Evauating Properties
-
-  You are given an object called sumMe containing several key/value pairs and a
-  variable called total whose initial value is 0. 
-  Using a for... in loop, iterate through the keys of sumMe; if the value 
-  corresponding to a key is a number, add it to total.
-*/
-
-const sumMe = {
-  hello: 'there',
-  you: 8,
-  are: 7,
-  almost: '10',
-  done: '!'
-};
-let total = 0;
-// ADD CODE HERE
-
-for (let prop in sumMe) {
-  if (typeof sumMe[prop] === 'number') {
-    total += sumMe[prop]
-  }
-}
-
-/*
-
-  5- Callbacks: Re-creating Map
-
-  Create a function subtractTwo that accepts a number and returns that number minus 2.
-
-  Then create a function map that takes two inputs -
-    - an array of numbers (a list of numbers)
-    - a 'callback' function - this function is applied to each element of the array (inside of the function 'map')
-  
-  Have your map function return a new array filled with numbers that are the result
-  of using the 'callback' function on each element of the input array. 
-
-  *** Do not use the native map or forEach method ***
-
-*/
-
-function subtractTwo(num) {           
-  return num - 2                     
-}
-
-function map(arr, callbackFunc) {
-  
-    const newArr = [];
-  
-    for( let i = 0; i < arr.length; i++) {
-      newArr.push(callbackFunc(arr[i]));
-    }
-    return newArr;
-}
-
-console.log(map([3,4,5], subtractTwo)); 
-
-/*
-
- 6 - Reduce
-
- The function reduce takes an array and reduces the elements to a single value.
-
- The reduce function loops through the array and applies any operation that you
- can put into a function to each element in the array while keeping track of the
- outcome of each loop. 
- 
- In this way, we could use reduce to do things like sum all the numbers in an array
- or multiply them all together.
-
- const nums = [4, 1, 3];
- const add = function(a, b) { return a + b; }
- reduce(nums, add, 0); //-> 8
- 
- Here's how it works:
-
-   The function has an "accumulator value". Its job is to keep track of the accumulated output of each loop. It starts out equal to the initialValue.
-   The array is iterated over, passing the accumulator and the next array element as arguments to the callback.
-   The callback's return value becomes the new accumulator value.
-   The next loop executes with this new accumulator value.
-
-   In the example above, the accumulator begins at 0. add(0,4) is called. 
-   The accumulator's value is now 4. 
-   Then add(4, 1) makes it 5. 
-   Finally add(5, 3) brings it to 8, which is returned.
-
-Construct your own reduce function that accepts an array, a callback, 
-and an initial value and returns a single value.
-
-*/
-
-function reduce(arr, callbackFunc, initVal) {
-  /*
-      1. make sure array is being passed
-      2. if initVal is not passed, accumulator uses the first element in array
-         then just use the array starting with 2nd element
-         if initVal is passed, accumulator is set to initVal
-  */
-
-    if (Array.isArray(arr)) {
-       let accum;
-       if (initVal === undefined) {
-           accum = arr[0];
-           arr = arr.slice(1);
-       } else {
-          accum = initVal;
-       }
-    
-       for (let i = 0; i < arr.length; i++) {
-        accum = callbackFunc(accum, arr[i], i, arr);
-       }
-
-        return accum;
-    } 
-  }
-
-const nums = [4, 1, 3];
-const add = function(a, b) { return a + b; }
-console.log(reduce(nums, add, 0)); // should log 8
-
-/*
-
-  7 - Intersection: Use reduce and filter to find the intersection of two arrays.
-
-  Construct a function intersection that compares input arrays and returns a new array 
-  with elements found in all of the inputs.
-
-  Note: Use the reduce and filter methods.
+Note: Use the reduce and filter methods.
 
 */
 
 function intersection(arr) {
-  
-  /*
-     Reduced value will be one array (because original array contains multiple arrays)
-     acc => 1st array
-     cur => 2nd and 3rd last array
-     
-     The filter will return new array if element value is "included" in cur arrays
-     from the acc array.
-     
-     note: use console.log on acc and cur 
-  */
-  return arr.reduce((acc, cur) => {
-     return acc.filter(elem => cur.includes(elem))
-  })
-  
+
+/*
+   Reduced value will be one array (because original array contains multiple arrays)
+   acc => 1st array
+   cur => 2nd and 3rd last array
+   
+   The filter will return new array if element value is "included" in cur arrays
+   from the acc array.
+   
+   note: use console.log on acc and cur 
+*/
+return arr.reduce((acc, cur) => {
+   return acc.filter(elem => cur.includes(elem))
+})
+
 }
 
 const arr1 = [5, 10, 15, 20];
@@ -517,83 +383,76 @@ console.log(intersection([arr1, arr2, arr3])); // should log: [5, 15]
 
 /*
 
-  8 - Object of Matches
+8 - Object of Matches
 
-  Construct a function objOfMatches that accepts two arrays and a callback. 
-  objOfMatches will build an object and return it. 
-  
-  To build the object, objOfMatches will test each element of the first array 
-  using the callback to see if the output matches the corresponding element 
-  by index) of the second array. 
-  
-  If there is a match, the element from the first array becomes a key in an object, 
-  and the element from the second array becomes the corresponding value.
+Construct a function objOfMatches that accepts two arrays and a callback. 
+objOfMatches will build an object and return it. 
+
+To build the object, objOfMatches will test each element of the first array 
+using the callback to see if the output matches the corresponding element 
+by index) of the second array. 
+
+If there is a match, the element from the first array becomes a key in an object, 
+and the element from the second array becomes the corresponding value.
 
 */
 
 function objOfMatches(arr1, arr2, cb) {
 
-  const obj = {};
+const obj = {};
 
-  for (let i = 0; i < arr1.length; i++) {
-    
-    if (cb(arr1[i]) === arr2[i]) {
-      obj[arr1[i]] = arr2[i];
-    }
+for (let i = 0; i < arr1.length; i++) {
+  
+  if (cb(arr1[i]) === arr2[i]) {
+    obj[arr1[i]] = arr2[i];
   }
-  return obj;
+}
+return obj;
 }
 
- const _array1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
- const _array2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
- function uppercaser(str) { return str.toUpperCase(); }
- console.log(objOfMatches(_array1, _array2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
+const _array1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
+const _array2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
+function uppercaser(str) { return str.toUpperCase(); }
+console.log(objOfMatches(_array1, _array2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
 
- /*
+/*
 
-   9 - Good Keys
+ 9 - Good Keys
 
-   Create a function goodKeys that accepts an object and a callback. 
-   The callback will return either true or false. 
-   
-   goodKeys will iterate through the object and perform the callback on each value. 
-   
-   goodKeys will then return an array consisting only the keys whose associated values 
-   yielded a true return value from the callback.
+ Create a function goodKeys that accepts an object and a callback. 
+ The callback will return either true or false. 
+ 
+ goodKeys will iterate through the object and perform the callback on each value. 
+ 
+ goodKeys will then return an array consisting only the keys whose associated values 
+ yielded a true return value from the callback.
 
- */
+*/
 
-   function goodKeys(obj, callback){
-    //declare empty arr
-    
-    let trueValArr = [];
-    
-    //iter thru obj using for in loop
+ function goodKeys(obj, callback){
+  //declare empty arr
   
-    for (const property in obj){
-      //callback on each val obj
-   
-      let ret = callback(obj[property]);
+  let trueValArr = [];
+  
+  //iter thru obj using for in loop
+
+  for (const property in obj){
+    //callback on each val obj
+ 
+    let ret = callback(obj[property]);
+  
+    // check if callback return is true; if it is, add key value to array
     
-      // check if callback return is true; if it is, add key value to array
-      
-      if (ret) {
-        trueValArr.push(property);
-      }
-   
+    if (ret) {
+      trueValArr.push(property);
     }
-    
-    return trueValArr;
+ 
   }
   
-  // Uncomment these to check your work!
-   const sunny = { mac: 'priest', dennis: 'calculator', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
-  function startsWithBird(str) { return str.slice(0, 4).toLowerCase() === 'bird'; };
-  console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']
+  return trueValArr;
+}
 
-  /*
-
-  10 - Filter Range
-
-
-  */
+// Uncomment these to check your work!
+ const sunny = { mac: 'priest', dennis: 'calculator', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
+function startsWithBird(str) { return str.slice(0, 4).toLowerCase() === 'bird'; };
+console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']

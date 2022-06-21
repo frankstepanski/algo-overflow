@@ -1,9 +1,3 @@
-## Prep
-
-
-
-
-
 ## Resources
 
 - [Pair Programming](https://shopify.engineering/pair-programming-explained)

@@ -1,11 +1,34 @@
 /*
+evaluateObj(obj)
+You are given an object containing several key/value pairs. 
+Add up all the values of properties (whose is a number) and return the total.
+*/
+
+export const evaluateObj = (obj) => {
+
+  if (typeof obj !== 'object' || Object.keys(obj).length === 0) {
+    return null;
+  }
+
+  let total = 0;
+
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'number') {
+      total += obj[prop]
+    }
+  }
+
+  return total
+}
+
+/*
 map(array, callback)
 
 Create a function that takes two arguments: an array and a callback.
 The function will execte the callback on every element of the array.
 The callback should return a new array with the result of the callback.
 Note: the callback can be as simple as adding two arguments together.
-*** Do not use the native map or forEach method ***
+*** Do not use the native map method ***
 */        
   
 export const map = (arr, cb) => {
@@ -41,56 +64,25 @@ of each loop. It starts out equal to the 3rd argument or first value in passed a
 
 */
 
-export const reduce = (arr, cb, initVal) => {
+export const reduce = (arr, cb, initVal = undefined) => {
 
-  if (Array.isArray(arr) && arr.length !== 0) {
-       let accum;
-       if (initVal === undefined) {
-           accum = arr[0];
-           arr = arr.slice(1); // remove first element
-       } else {
-          accum = initVal;
-       }
-    
-       for (let i = 0; i < arr.length; i++) {
-          accum = cb(accum, arr[i], i, arr);
-       }
-  
-        return accum;
-    } 
-  }
-  
-  const nums = [4, 1, 3];
-  const add = function(a, b) { return a + b; }
-  console.log(reduce(nums, add, 0)); // should log 8
-  
-  /*
-/*
-evaluateObj(obj)
-You are given an object containing several key/value pairs. 
-Add up all the values of properties (whose is a number) and return the total.
-*/
+    if (!Array.isArray(arr) && !arr.length !== 0) return null;
 
-export const evaluateObj = (obj) => {
-
-  if (typeof obj !== 'object') {
-    return null;
-  }
-
-  if (Object.keys(obj).length === 0) {
-    return null;
-  }
-
-  let total = 0;
-
-  for (let prop in obj) {
-    if (typeof obj[prop] === 'number') {
-      total += obj[prop]
+    let accum;
+    if (initVal === undefined) {
+        accum = arr[0];
+        arr = arr.slice(1); // remove first element
+    } else {
+        accum = initVal;
     }
-  }
+    
+    for (let i = 0; i < arr.length; i++) {
+       accum = cb(accum, arr[i]);
+    }
+  
+    return accum;
+} 
 
-  return total
-}
 
 /*
 unique(arr)
@@ -345,114 +337,3 @@ export const containsWord = (sentence, targetWord) => {
 
   return false;
 };
-
-
-/*
-
-7 - Intersection: Use reduce and filter to find the intersection of two arrays.
-
-Construct a function intersection that compares input arrays and returns a new array 
-with elements found in all of the inputs.
-
-Note: Use the reduce and filter methods.
-
-*/
-
-function intersection(arr) {
-
-/*
-   Reduced value will be one array (because original array contains multiple arrays)
-   acc => 1st array
-   cur => 2nd and 3rd last array
-   
-   The filter will return new array if element value is "included" in cur arrays
-   from the acc array.
-   
-   note: use console.log on acc and cur 
-*/
-return arr.reduce((acc, cur) => {
-   return acc.filter(elem => cur.includes(elem))
-})
-
-}
-
-const arr1 = [5, 10, 15, 20];
-const arr2 = [15, 88, 1, 5, 7];
-const arr3 = [1, 10, 15, 5, 20];
-console.log(intersection([arr1, arr2, arr3])); // should log: [5, 15]
-
-/*
-
-8 - Object of Matches
-
-Construct a function objOfMatches that accepts two arrays and a callback. 
-objOfMatches will build an object and return it. 
-
-To build the object, objOfMatches will test each element of the first array 
-using the callback to see if the output matches the corresponding element 
-by index) of the second array. 
-
-If there is a match, the element from the first array becomes a key in an object, 
-and the element from the second array becomes the corresponding value.
-
-*/
-
-function objOfMatches(arr1, arr2, cb) {
-
-const obj = {};
-
-for (let i = 0; i < arr1.length; i++) {
-  
-  if (cb(arr1[i]) === arr2[i]) {
-    obj[arr1[i]] = arr2[i];
-  }
-}
-return obj;
-}
-
-const _array1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
-const _array2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
-function uppercaser(str) { return str.toUpperCase(); }
-console.log(objOfMatches(_array1, _array2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
-
-/*
-
- 9 - Good Keys
-
- Create a function goodKeys that accepts an object and a callback. 
- The callback will return either true or false. 
- 
- goodKeys will iterate through the object and perform the callback on each value. 
- 
- goodKeys will then return an array consisting only the keys whose associated values 
- yielded a true return value from the callback.
-
-*/
-
- function goodKeys(obj, callback){
-  //declare empty arr
-  
-  let trueValArr = [];
-  
-  //iter thru obj using for in loop
-
-  for (const property in obj){
-    //callback on each val obj
- 
-    let ret = callback(obj[property]);
-  
-    // check if callback return is true; if it is, add key value to array
-    
-    if (ret) {
-      trueValArr.push(property);
-    }
- 
-  }
-  
-  return trueValArr;
-}
-
-// Uncomment these to check your work!
- const sunny = { mac: 'priest', dennis: 'calculator', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
-function startsWithBird(str) { return str.slice(0, 4).toLowerCase() === 'bird'; };
-console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']

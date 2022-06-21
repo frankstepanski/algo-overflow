@@ -17,17 +17,14 @@
 - Week 1
   - Leetcode Easy 
     - Fizz Buzz 
-    - Sum Digits 
-    - Reverse String 
-    - Valid Anagram 
+    - Add Digits 
+    - Two Sum
     - Valid Palindrome 
+    - Valid Anagram 
     - Two Sum 
-    - Contains Duplicate
-    - Missing Number
-    - Climbing Stairs
     - Roman To Integer
-    - Maximum Subarray
-    - Best Time to Buy and Sell Stock
+    - Valid Parentheses
+ 
 - Week 2
   - BigO Notation
   - White-Boarding Tips

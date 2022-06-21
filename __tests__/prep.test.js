@@ -9,6 +9,7 @@ import {
             containsWord,
             evaluateObj,
             map,
+            reduce
 
 } from "../0-prep";
 
@@ -28,6 +29,7 @@ it('evaluateObj - returns total value of number property values', () => {
     expect(evaluateObj({})).toEqual(null);
 
 });
+
 it('maxValue - return max value from array', () => {
 
     expect(maxValue([1,2,3,4,5])).toBe(5); 
@@ -48,6 +50,18 @@ it('map - takes array and callback and returns new array', () => {
 
     // edge cases:
     expect(map([], cb1)).toEqual(null);
+
+});
+
+it('reduce - returns value from result of array and callback', () => {
+
+    const array = [4, 1, 3];
+    const cb = function(a, b) { return a + b; }
+
+    expect(reduce(array, cb, 0)).toBe(8); 
+ 
+    //edge cases: 
+    expect(reduce([])).toBe(undefined);
 
 });
 

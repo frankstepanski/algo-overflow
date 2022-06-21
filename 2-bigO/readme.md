@@ -1,12 +1,3 @@
-## Big O Notation and Recursion
-
-
-
-
-
-
-
-
 ## Resources
 
 - [BigO Cheatsheet](https://www.bigocheatsheet.com/)

@@ -23,6 +23,12 @@
     - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
     - [Roman To Integer](https://leetcode.com/problems/roman-to-integer/)
     - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+    - [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays/)
+    - [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)
+    - [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
+    - [Flipping an Image](https://leetcode.com/problems/flipping-an-image/)
+    - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+    - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 - Week 2
   - BigO Notation
   - White-Boarding Tips

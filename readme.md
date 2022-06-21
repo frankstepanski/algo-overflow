@@ -23,7 +23,6 @@
     - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
     - [Roman To Integer](https://leetcode.com/problems/roman-to-integer/)
     - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
- 
 - Week 2
   - BigO Notation
   - White-Boarding Tips

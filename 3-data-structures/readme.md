@@ -1,16 +1,4 @@
-## Data Structures
-
-
-
-
-
-
-
-
-
-
 ## Resources
-
 
 - [Data Structures Overview](https://www.youtube.com/watch?v=bum_19loj9A)
 - [Arrays and Memory](https://www.youtube.com/watch?v=pmN9ExDf3yQ)

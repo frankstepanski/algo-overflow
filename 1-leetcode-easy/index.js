@@ -1,7 +1,7 @@
 /*
 
 fizzBuzz
-https://leetcode.com/problems/fizz-buzz/
+
 Given an integer n, return a string array where:
 
  - answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
@@ -34,7 +34,7 @@ export const fizzBuzz = (n) =>{
 /*
 
 addDigits
-https://leetcode.com/problems/add-digits/
+
 Given an integer num, repeatedly add all its digits until the result has only one digit, 
 and return that digit.
 
@@ -64,7 +64,7 @@ export const addDigits = (num) =>{
 /*
 
 twoSum
-https://leetcode.com/problems/two-sum/
+
 Given an array of integers nums and an integer target, return indices of the two 
 numbers such that they add up to target.
 
@@ -105,7 +105,6 @@ export const twoSum = (arr, target) =>{
 /*
 
 Valid Palindrome
-https://leetcode.com/problems/valid-palindrome/
 
 A phrase is a palindrome if, after converting all uppercase letters into lowercase 
 letters and removing all non-alphanumeric characters, it reads the same forward
@@ -164,7 +163,7 @@ const _isAlphaNumeric = (char) =>{
 /*
 
 Valid Anagram
-https://leetcode.com/problems/valid-anagram/
+
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 An Anagram is a word or phrase formed by rearranging the letters of a different 
@@ -209,7 +208,6 @@ export const validAnagram = (s, t) =>{
 /*
 
 Roman to Integer
-https://leetcode.com/problems/roman-to-integer/
 
 Given a roman numeral, convert it to an integer.
 
@@ -258,7 +256,6 @@ export const romanToInt = (s) =>{
 /*
    
 Valid Parentheses
-https://leetcode.com/problems/valid-parentheses/
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
 determine if the input string is valid.

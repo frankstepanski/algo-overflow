@@ -16,14 +16,13 @@
     - Callbacks and higher order functions
 - Week 1
   - Leetcode Easy 
-    - Fizz Buzz 
-    - Add Digits 
-    - Two Sum
-    - Valid Palindrome 
-    - Valid Anagram 
-    - Two Sum 
-    - Roman To Integer
-    - Valid Parentheses
+    - [https://leetcode.com/problems/fizz-buzz/](Fizz Buzz) 
+    - [https://leetcode.com/problems/add-digits/](Add Digits) 
+    - [https://leetcode.com/problems/two-sum/](Two Sum)
+    - [https://leetcode.com/problems/valid-palindrome/](Valid Palindrome)
+    - [https://leetcode.com/problems/valid-anagram/](Valid Anagram) 
+    - [https://leetcode.com/problems/roman-to-integer/](Roman To Integer)
+    - [https://leetcode.com/problems/valid-parentheses/](Valid Parentheses)
  
 - Week 2
   - BigO Notation

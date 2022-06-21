@@ -16,7 +16,7 @@
     - Callbacks and higher order functions
 - Week 1
   - Leetcode Easy 
-    - (Fizz Buzz)[https://leetcode.com/problems/fizz-buzz/]
+    - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
     - [https://leetcode.com/problems/add-digits/](Add Digits) 
     - [https://leetcode.com/problems/two-sum/](Two Sum)
     - [https://leetcode.com/problems/valid-palindrome/](Valid Palindrome)

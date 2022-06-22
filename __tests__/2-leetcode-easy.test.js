@@ -5,7 +5,8 @@ import {
     validPalindrome,
     validAnagram,
     romanToInt,
-    validParentheses
+    validParentheses,
+    findDifference
 
 } from "../1-leetcode-easy";
 
@@ -81,4 +82,13 @@ it('validParentheses - returns true if string has only valid parentheses set', (
     expect(validParentheses("(]")).toBeFalsy();
     expect(validParentheses("([)]")).toBeFalsy();
 
+});
+
+it('findDifference - returns true if string has only valid parentheses set', () => {
+
+    expect(findDifference([1,2,3,3], [1,1,2,2])).toStrictEqual([[3],[]]);
+    expect(findDifference([1,2,3], [2,4,6])).toStrictEqual([[1,3],[4,6]]);
+    expect(findDifference([1,2,3], [1,2,3])).toStrictEqual([[],[]]);
+    
+    expect(findDifference([], [])).toStrictEqual([[],[]]);
 });

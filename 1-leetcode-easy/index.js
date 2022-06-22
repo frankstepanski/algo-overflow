@@ -89,22 +89,23 @@ const _twoSum = (arr, target) =>{
 };
 
 // hash map:
-export const twoSum = (arr, target) =>{
+export const twoSum = (nums, target) =>{
     // store target - num in hash map, index of num in arr in hash map
     // [1,5,9), 10] => {1:0, 5:1} => Last element matches target - num (1)
     let hashMap = {}; 
-    for (let i = 0; i < arr.length; i++) {
-        let diff = target - arr[i];
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i];
         if (hashMap[diff] !== undefined) {
             return [hashMap[diff], i];
         }
-        hashMap[arr[i]] = i;
+        hashMap[nums[i]] = i;
     }
 }
 
 /*
 
 Valid Palindrome
+https://leetcode.com/problems/valid-palindrome/
 
 A phrase is a palindrome if, after converting all uppercase letters into lowercase 
 letters and removing all non-alphanumeric characters, it reads the same forward
@@ -163,6 +164,7 @@ const _isAlphaNumeric = (char) =>{
 /*
 
 Valid Anagram
+https://leetcode.com/problems/valid-anagram/
 
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
@@ -208,6 +210,7 @@ export const validAnagram = (s, t) =>{
 /*
 
 Roman to Integer
+https://leetcode.com/problems/roman-to-integer/
 
 Given a roman numeral, convert it to an integer.
 
@@ -256,6 +259,7 @@ export const romanToInt = (s) =>{
 /*
    
 Valid Parentheses
+https://leetcode.com/problems/valid-parentheses/
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
 determine if the input string is valid.
@@ -298,6 +302,7 @@ export const validParentheses = (s) =>{
 /*
 
 Find the Difference of Two Arrays
+https://leetcode.com/problems/find-the-difference-of-two-arrays/
 
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
 
@@ -308,9 +313,27 @@ Note that the integers in the lists may be returned in any order.
 
 */
 
+export const findDifference = (nums1, nums2) => {
 
+    if (nums1.length === 0 || nums2.length === 0) return [[],[]];
 
-
+    const distinctNums1 = [];
+    const distinctNums2 = [];
+  
+    for (let i = 0; i < nums1.length; i++) {
+        if (!nums2.includes(nums1[i]) && !distinctNums1.includes(nums1[i])) {
+           distinctNums1.push(nums1[i])
+        }
+    }
+  
+    for (let i = 0; i < nums2.length; i++) {
+      if (!nums1.includes(nums2[i]) && !distinctNums2.includes(nums2[i]))  {
+           distinctNums2.push(nums2[i])
+        }
+    }
+  
+    return [distinctNums1, distinctNums2]
+}
 
 /*
 

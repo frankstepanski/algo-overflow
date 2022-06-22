@@ -92,7 +92,6 @@
     - Insertion Sort
     - Quick Sort
 
-
 - Week 7
     - Pointers and Windows
       - Reverse String
@@ -102,7 +101,8 @@
       - Two Sum II
       - Middle of Linked List
     - Fast and Slow pointers
-- Week 7
+    
+- Week 8
   - Leetcode medium
     - Valid Sudoku
     - Number of Islands
@@ -116,6 +116,7 @@
     - Reorder List
     - 3Sum
     - Container with Most Water
+    
 - Week 8
   - Dynamic Programming
     - Best Time to Buy and Sell Stock

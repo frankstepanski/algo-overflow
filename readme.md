@@ -29,9 +29,9 @@
     - [Flipping an Image](https://leetcode.com/problems/flipping-an-image/)
     - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
     - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+    - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - Week 2
   - BigO Notation
-  - White-Boarding Tips
   - Recursion
     - Reverse String
     - Fibonacci Number
@@ -116,7 +116,7 @@
     - Reorder List
     - 3Sum
     - Container with Most Water
-    
+
 - Week 8
   - Dynamic Programming
     - Best Time to Buy and Sell Stock

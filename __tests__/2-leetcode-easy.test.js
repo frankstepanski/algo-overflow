@@ -6,7 +6,13 @@ import {
     validAnagram,
     romanToInt,
     validParentheses,
-    findDifference
+    findDifference,
+    getConcatenation,
+    shuffle,
+    flipAndInvertImage,
+    maxSubArray,
+    containsDuplicate,
+    maxProfit
 
 } from "../1-leetcode-easy";
 
@@ -89,6 +95,40 @@ it('findDifference - returns true if string has only valid parentheses set', () 
     expect(findDifference([1,2,3,3], [1,1,2,2])).toStrictEqual([[3],[]]);
     expect(findDifference([1,2,3], [2,4,6])).toStrictEqual([[1,3],[4,6]]);
     expect(findDifference([1,2,3], [1,2,3])).toStrictEqual([[],[]]);
-    
+
     expect(findDifference([], [])).toStrictEqual([[],[]]);
 });
+
+it('getConcatenation - return array with concatenation of itself', () => {
+
+    expect(getConcatenation([1,2,1])).toStrictEqual([1,2,1,1,2,1]);
+    expect(getConcatenation([1,3,2,1])).toStrictEqual([1,3,2,1,1,3,2,1]);
+
+    expect(getConcatenation([])).toStrictEqual([]);
+});  
+
+it('shuffle - shuffle elements of array and return it', () => {
+
+    expect(shuffle([2,5,1,3,4,7],3)).toStrictEqual([2,3,5,4,1,7]);
+    expect(shuffle([1,2,3,4,4,3,2,1], 4)).toStrictEqual([1,4,2,3,3,2,4,1]);
+}); 
+
+it('flipAndInvertImage - flip (reverse) and invert a matrix (array of arrays)', () => {
+
+    expect(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]])).toStrictEqual([[1,0,0],[0,1,0],[1,1,1]]);
+    expect(flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]])).toStrictEqual([[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]);
+}); 
+
+it('maxSubArray - return largest contiguous subarray sum', () => {
+
+    expect(maxSubArray([])).toStrictEqual([]);
+    expect(maxSubArray([])).toStrictEqual([]);
+}); 
+
+//containsDuplicate
+
+it('containsDuplicate - ', () => {
+
+    expect(maxSubArray([])).toStrictEqual([]);
+    expect(maxSubArray([])).toStrictEqual([]);
+}); 

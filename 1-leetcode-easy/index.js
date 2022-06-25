@@ -338,33 +338,195 @@ export const findDifference = (nums1, nums2) => {
 /*
 
 Concatenation of Array
+https://leetcode.com/problems/concatenation-of-array/
 
+Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
+
+Specifically, ans is the concatenation of two nums arrays.
+
+Return the array ans.
+
+Input: nums = [1,2,1]
+Output: [1,2,1,1,2,1]
+Explanation: The array ans is formed as follows:
+- ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
+- ans = [1,2,1,1,2,1]
 */
+
+export const getConcatenation = function(nums) {
+    
+    if (nums.length === 0) return [];
+
+    const _array = [...nums];
+    
+    for (let i = 0; i < nums.length; i++) {
+        
+        _array.push(nums[i])
+    }
+    
+    return _array;
+};
 
 /*
 
 Shuffle the Array
+https://leetcode.com/problems/shuffle-the-array/
 
+Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+
+Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+
+Input: nums = [2,5,1,3,4,7], n = 3
+Output: [2,3,5,4,1,7] 
 
 */
+export const shuffle = function(nums, n) {
+
+    const result = [];
+    
+    // loop through n (n * 2 length array)
+    for (let i = 0; i < n; i++) { 
+       result[2*i] = nums[i]; // even
+       result[2*i+1] = nums[n+i] // odd
+    }
+    
+    return result;
+};
+
 
 /*
 
 Flipping an Image
+https://leetcode.com/problems/flipping-an-image/
+
+Given an n x n binary matrix image, flip the image horizontally, then invert it, and return the resulting image.
+
+To flip an image horizontally means that each row of the image is reversed.
+
+For example, flipping [1,1,0] horizontally results in [0,1,1].
+To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0.
+
+For example, inverting [0,1,1] results in [1,0,0]
+ start: [1,1,0]
+ step 1: [1,1,0] => [0,1,1] (flip horizontally) - same as reversing an array
+ step 2: [0,1,1] => [1,0,0] (invert)
 
 */
 
+export const flipAndInvertImage = function(image) {
+
+    // short way:
+    // return image.map(row => row.reverse().map(x => x === 0 ? 1 : 0));
+
+    // long way:
+    // first reverse the array:
+    let results = [];
+
+    // first reverse:
+    for (let i = 0; i < image.length; i++) {
+      let reversed = []
+      for (let j=image[i].length -1; j > -1; j--) {          
+          reversed.push(image[i][j]);
+      }
+      results.push(reversed)
+    }
+  
+    // then invert:
+    for (let i = 0; i < results.length; i++) {
+        for (let j = 0; j < results[i].length; j++) {
+            results[i][j] = results[i][j] === 0 ? 1 : 0;
+        }
+    }
+    
+    return results;
+};
 
 /*
  
 Maximum Subarray
+https://leetcode.com/problems/maximum-subarray/
+
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+A subarray is a contiguous part of an array.
+
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
 
 */
+
+export const maxSubArray = function(nums) {
+    
+    // brute force (O(n^2))):
+    /*
+      let max = nums[0];
+      for (let i = 0; i < nums.length; i++) {
+         let sum = 0;
+         for (let j = i; j < nums.length; j++) {
+             sum += nums[j];
+             if (sum > max) max = sum;
+         }
+      }
+      return max;
+    */
+
+      // linear (O(n)):
+      let max = nums[0];
+      let sum = 0;
+      for (let i = 0; i < nums.length; i++) {
+          sum += nums[i];
+          if (sum > max) max = sum;
+          if (sum < 0) sum = 0;
+      }
+      return max;
+};
 
 /*
 
 Contains Duplicate
+https://leetcode.com/problems/contains-duplicate/
+
+Given an integer array nums, return true if any value appears at least twice in the array,
+and return false if every element is distinct.
 
 */
 
+export const containsDuplicate = function(nums) {
 
+    // brute force (O(n^2)) - naive linear search:
+     for (let i = 0; i < nums.length; i++) {
+         for (let j = i + 1; j < nums.length; j++) {
+             if (nums[i] === nums[j]) return true;
+         }
+     }
+     return false;
+
+    // logrithmic (O(n log n)):
+ 
+    
+     
+}
+
+/*
+
+Best Time to Buy and Sell Stock
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+You want to maximize your profit by choosing a single day to buy one stock and choosing
+a different day in the future to sell that stock.
+Return the maximum profit you can achieve from this transaction. 
+If you cannot achieve any profit, return 0.
+
+*/
+
+export const maxProfit = function(prices) {
+    
+        let max = 0;
+        let min = prices[0];
+        for (let i = 1; i < prices.length; i++) {
+            if (prices[i] < min) min = prices[i];
+            if (prices[i] - min > max) max = prices[i] - min;
+        }
+        return max;
+}

@@ -1,4 +1,88 @@
 /*
+   Create an object 5 separate ways that has two properties and one method: 
+      - name and age
+      - sayHello()
+
+    1. Object literal
+    2. Object.create 
+       - uses exisiting object literal as a prototype to create new objects
+       - allows a "base" object literal to be used to then add unique properties to it
+    3. Factory function 
+        - function that returns an object 
+        - does not allow you to use 'this' or instantiate an object
+        - no inheritance
+    4. Constructor function
+      - function that acts like a class and returns an object
+      - allows you to use 'this' and instantiate an object
+      - inheritance 
+    5. ES6 Class
+      - syntactic sugar for a constructor function
+      - mimics other OOP languages (sort of)
+
+    Note: All these ways use the prototype chain (prototype object used to provide
+          classical OOP). Every object has a prototype property that points to the
+          prototype object of the object's constructor.
+*/
+
+  // object literal
+  const person1 = {
+    name: 'John',
+    age: 30,
+    sayHello: function() {
+      console.log('Hello' + this.name);
+    }
+  }
+
+  // Object.create
+  const PersonStore = {
+    sayHello: function() {
+      console.log('Hello');
+    }
+  }
+
+  const person2 = Object.create(PersonStore);
+  person2.name = 'John';
+  person2.age = 30;
+
+  // factory function
+  function createPerson(name, age) {
+    return {
+      name,
+      age,
+      sayHello: function() {
+        console.log('Hello');
+      }
+    }
+  }
+
+  const person3 = createPerson('John', 30);
+
+  // constructor function
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    sayHello = function() {
+      console.log('Hello' + this.name);
+    }
+  }
+
+  const pete = new Person('Pete', 30);
+
+  // ES6 class
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    sayHello() {
+      console.log('Hello' + this.name);
+    }
+  }
+
+  const jane = new Person('Jane', 30);
+  
+
+/*
 evaluateObj(obj)
 You are given an object containing several key/value pairs. 
 Add up all the values of properties (whose is a number) and return the total.

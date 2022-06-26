@@ -119,16 +119,18 @@ it('flipAndInvertImage - flip (reverse) and invert a matrix (array of arrays)', 
     expect(flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]])).toStrictEqual([[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]);
 }); 
 
-it('maxSubArray - return largest contiguous subarray sum', () => {
+it('maxSubArray - return sum of largest contiguous subarray', () => {
 
-    expect(maxSubArray([])).toStrictEqual([]);
-    expect(maxSubArray([])).toStrictEqual([]);
+    expect(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])).toBe(6);
+    expect(maxSubArray([5,4,-1,7,8])).toBe(23);
+
+    expect(maxSubArray([])).toBe(0);
 }); 
 
-//containsDuplicate
+it('containsDuplicate - returns true if an array contains a dupllicate value', () => {
 
-it('containsDuplicate - ', () => {
+    expect(containsDuplicate([5,4,-2,5,1])).toBeTruthy();
+    expect(containsDuplicate([5,4,-2,3,1])).toBeFalsy();
 
-    expect(maxSubArray([])).toStrictEqual([]);
-    expect(maxSubArray([])).toStrictEqual([]);
+    expect(containsDuplicate([])).toBeFalsy();
 }); 

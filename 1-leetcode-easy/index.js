@@ -457,6 +457,8 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 
 export const maxSubArray = function(nums) {
     
+    if (nums.length === 0) return 0;
+
     // brute force (O(n^2))):
     /*
       let max = nums[0];
@@ -494,17 +496,33 @@ and return false if every element is distinct.
 export const containsDuplicate = function(nums) {
 
     // brute force (O(n^2)) - naive linear search:
+    /*
      for (let i = 0; i < nums.length; i++) {
          for (let j = i + 1; j < nums.length; j++) {
              if (nums[i] === nums[j]) return true;
          }
      }
      return false;
+    */
 
     // logrithmic (O(n log n)):
- 
-    
-     
+    // sorting allows us to use loop once to find the first duplicate
+    /*
+    nums.sort((a, b) => a - b);
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] === nums[i + 1]) return true;
+    }
+    return false;
+    */
+
+    // linear (O(n)):
+    // use a hash table to store the values
+    const _hash = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (_hash[nums[i]]) return true;
+        _hash[nums[i]] = true;
+    }
+    return false; 
 }
 
 /*
@@ -518,10 +536,15 @@ a different day in the future to sell that stock.
 Return the maximum profit you can achieve from this transaction. 
 If you cannot achieve any profit, return 0.
 
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+
 */
 
 export const maxProfit = function(prices) {
     
+    //  linear (O(n)):
         let max = 0;
         let min = prices[0];
         for (let i = 1; i < prices.length; i++) {
@@ -529,4 +552,5 @@ export const maxProfit = function(prices) {
             if (prices[i] - min > max) max = prices[i] - min;
         }
         return max;
+
 }

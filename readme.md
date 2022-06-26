@@ -38,7 +38,6 @@
     - Power of Two
   - Recursive Backtracking
   - Caching (Memoization)
-    - Climbing Stairs
 
 - Week 3
   - Data Structures Part 1

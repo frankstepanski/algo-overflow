@@ -11,4 +11,8 @@
 - [How to communicate in tech interviews](https://www.youtube.com/watch?v=TqjiQbyomx4)
 - [Coding Mindset](https://madsbrodt.com/mastering-coding-mindset/)
 - [Callbacks Refresher](https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/)
+- [OOP Crash Course](https://www.youtube.com/watch?v=vDJpGenyHaA)
+- [OOP](https://www.youtube.com/watch?v=PFmuCDHHpwk&t=325s)
+- [Intro to ES6 Classes](https://www.youtube.com/watch?v=_D6ilsRB9tw)
+- [ES6 Classes Youtube Playlist](https://www.youtube.com/playlist?list=PLVvjrrRCBy2I2eE1e1yOuhts2oTvWesMy)
 - [JavaScript Visualizer](https://pythontutor.com/javascript.html#mode=edit)

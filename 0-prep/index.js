@@ -29,14 +29,14 @@
     name: 'John',
     age: 30,
     sayHello: function() {
-      console.log('Hello' + this.name);
+      console.log('Hello' + this.name)
     }
   }
 
   // Object.create
   const PersonStore = {
     sayHello: function() {
-      console.log('Hello');
+      console.log('Hello')
     }
   }
 
@@ -50,7 +50,7 @@
       name,
       age,
       sayHello: function() {
-        console.log('Hello');
+        console.log('Hello')
       }
     }
   }
@@ -59,8 +59,8 @@
 
   // constructor function
   function Person(name, age) {
-    this.name = name;
-    this.age = age;
+    this.name = name,
+    this.age = age,
     sayHello = function() {
       console.log('Hello' + this.name);
     }
@@ -80,7 +80,7 @@
   }
 
   const jane = new Person('Jane', 30);
-  
+
 
 /*
 evaluateObj(obj)

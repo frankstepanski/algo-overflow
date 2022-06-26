@@ -24,7 +24,9 @@
           prototype object of the object's constructor.
 */
 
+/*
   // object literal
+
   const person1 = {
     name: 'John',
     age: 30,
@@ -80,7 +82,7 @@
   }
 
   const jane = new Person('Jane', 30);
-
+*/
 
 /*
 evaluateObj(obj)

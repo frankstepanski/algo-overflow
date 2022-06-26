@@ -33,9 +33,9 @@
 - Week 2
   - BigO Notation
   - Recursion
-    - Reverse String
-    - Fibonacci Number
-    - Power of Two
+    - [Reverse String](https://leetcode.com/problems/reverse-string)
+    - [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+    - [Power of Two](https://leetcode.com/problems/power-of-two/)
   - Recursive Backtracking
   - Caching (Memoization)
 

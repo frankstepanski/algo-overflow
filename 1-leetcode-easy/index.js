@@ -1,7 +1,7 @@
 /*
 
 fizzBuzz
-
+https://leetcode.com/problems/fizz-buzz/
 Given an integer n, return a string array where:
 
  - answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
@@ -34,6 +34,7 @@ export const fizzBuzz = (n) =>{
 /*
 
 addDigits
+https://leetcode.com/problems/add-digits/
 
 Given an integer num, repeatedly add all its digits until the result has only one digit, 
 and return that digit.
@@ -64,6 +65,7 @@ export const addDigits = (num) =>{
 /*
 
 twoSum
+https://leetcode.com/problems/two-sum/
 
 Given an array of integers nums and an integer target, return indices of the two 
 numbers such that they add up to target.

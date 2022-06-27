@@ -36,6 +36,7 @@
     - [Reverse String](https://leetcode.com/problems/reverse-string)
     - [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
     - [Power of Two](https://leetcode.com/problems/power-of-two/)
+    - [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
   - Recursive Backtracking
   - Caching (Memoization)
 

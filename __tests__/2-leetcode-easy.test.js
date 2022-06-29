@@ -12,7 +12,8 @@ import {
     flipAndInvertImage,
     maxSubArray,
     containsDuplicate,
-    maxProfit
+    maxProfit,
+    pascalTriangle,
 
 } from "../1-leetcode-easy";
 
@@ -136,6 +137,14 @@ it('containsDuplicate - returns true if an array contains a dupllicate value', (
 }); 
 
 it('maxProfilt - return highest profit from selling stock from array of stock prices', () => {
+
+    expect(maxProfit([7,1,5,3,6,4])).toBe(5);
+    expect(maxProfit([7,6,4,3,1])).toBe(0);
+    // edge case:
+    expect(maxProfit([])).toBe(null);
+}); 
+
+it('pascalsTriangle - given a number, return array of Pascals triangle', () => {
 
     expect(maxProfit([7,1,5,3,6,4])).toBe(5);
     expect(maxProfit([7,6,4,3,1])).toBe(0);

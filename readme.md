@@ -30,6 +30,7 @@
     - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
     - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
     - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+    - [Pasal's Triangle](https://leetcode.com/problems/pascals-triangle)
 - Week 2
   - BigO Notation
   - Recursion

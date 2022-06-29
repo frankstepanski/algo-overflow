@@ -11,10 +11,11 @@ Note: You can add an additional argument to store the output.
 
 */
 
-function repeater(char) {
+export const repeater = (char) => {
    
+    if (char === '') return '';
     // base case: when char length is equal to 5
-    if (output.length == 5) return output;
+    if (char.length == 5) return char;
     // recursive case: execute char (adding the char to char)
     return repeater(char + char[0]);
 }
@@ -28,7 +29,7 @@ Write a function that returns the factorial of a number.
 
 */
 
-function factorial(num, product = 1) {
+export const factorial = (num, product = 1) =>{
 
     // base case: num === 1; return product
     // 1! = 1 || 0! = 1
@@ -44,7 +45,7 @@ Get the length of an array using recursion without accessing its length property
 
 */
 
-function getLength(array, length = 0) {
+export const getLength = (array, length = 0) =>{
 
     // base case: check if first element is undefined (same as zero length)
     if (array[0] === undefined) return length;
@@ -69,13 +70,24 @@ interleaved, like so:
 
   - first element should be the first element of the first input array,
   - second element should be the first element of the second input array,
-  - the third element should be the second element of the first input array,
-  - fourth element should be the second element of the second array,
-  and so on.
+  - and so on.
+
+  test case:
+  const topHalf = ['Queen of Diamonds', 'Five of Hearts', 'Ace of Spades', 'Eight of Clubs'];
+  const bottomHalf = ['Jack of Hearts', 'Ten of Spades'];
+  ['Queen of Diamonds', 'Jack of Hearts', 'Five of Hearts', 'Ten of Spades', 'Ace of Spades', 'Eight of Clubs']
 
 */
 
-function shuffleCards(topHalf, bottomHalf) {
+export const shuffleCards = (topHalf, bottomHalf, shuffled= []) =>{
 
-   
+    const top = [...topHalf];
+    const bottom = [...bottomHalf];
+    
+    if (top.length === 0 && bottom.length === 0) return shuffled;
+    
+    if (top.length > 0) shuffled.push(top.shift());
+    if (bottom.length > 0) shuffled.push(bottom.shift());
+  
+    return shuffleCards(top, bottom, shuffled);
 }

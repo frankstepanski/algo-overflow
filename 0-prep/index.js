@@ -209,6 +209,7 @@ export const maxValue = (nums) => {
 };
 
 /*
+
 factorsOf(num)
 Write a function that takes in a number as an arg and return an array 
 containing all positive numbers that are able to divide into num with no remainder.
@@ -230,6 +231,7 @@ export const factorsOf = (num) => {
 }
 
 /*
+
 isPrime(number)
 Define a function that returns true if number is prime. 
 Otherwise, false. A number is prime if it is only divisible by 1 and itself.

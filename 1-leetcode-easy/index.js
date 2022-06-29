@@ -546,6 +546,8 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 
 export const maxProfit = function(prices) {
     
+    if (prices.length === 0) return null;
+    
     //  linear (O(n)):
         let max = 0;
         let min = prices[0];

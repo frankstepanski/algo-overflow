@@ -123,7 +123,7 @@ it('maxSubArray - return sum of largest contiguous subarray', () => {
 
     expect(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])).toBe(6);
     expect(maxSubArray([5,4,-1,7,8])).toBe(23);
-
+    // edge case:
     expect(maxSubArray([])).toBe(0);
 }); 
 
@@ -131,6 +131,14 @@ it('containsDuplicate - returns true if an array contains a dupllicate value', (
 
     expect(containsDuplicate([5,4,-2,5,1])).toBeTruthy();
     expect(containsDuplicate([5,4,-2,3,1])).toBeFalsy();
-
+    // edge case:
     expect(containsDuplicate([])).toBeFalsy();
+}); 
+
+it('maxProfilt - return highest profit from selling stock from array of stock prices', () => {
+
+    expect(maxProfit([7,1,5,3,6,4])).toBe(5);
+    expect(maxProfit([7,6,4,3,1])).toBe(0);
+    // edge case:
+    expect(maxProfit([])).toBe(null);
 }); 

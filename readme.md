@@ -42,7 +42,7 @@
      - Hash Maps
      - Linked Lists
        - Problems:
-         - Palindrome Linked List
+         - [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
          - Reverse Linked List
          - Linked List Cycle
          - Merge Two Sorted Lists (recursion)

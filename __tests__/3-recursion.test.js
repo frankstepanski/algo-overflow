@@ -6,7 +6,6 @@ import {
 
 } from "../2-bigO";
 
-
 it('repeater - returns input character 5 times', () => {
   
     expect(repeater('g')).toBe('ggggg');

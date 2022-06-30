@@ -547,7 +547,7 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 export const maxProfit = function(prices) {
     
     if (prices.length === 0) return null;
-    
+
     //  linear (O(n)):
         let max = 0;
         let min = prices[0];
@@ -558,3 +558,30 @@ export const maxProfit = function(prices) {
         return max;
 
 }
+/*
+
+Pascal's Triangle
+https://leetcode.com/problems/pascals-triangle/
+
+Given a number, return its corresponding row in the Pascal's triangle.
+
+*/
+
+export const pascalsTriangle = (numRows) =>{
+
+    if (numRows === 0 || !numRows ) return [];
+
+        let triangle = [[1]];
+
+        while (triangle.length < numRows) {
+          let last = triangle[triangle.length - 1];
+          let next = [1];
+          
+          for (let i = 0; i < last.length -1; i++) {
+              next.push(last[i] + last[i + 1]);
+          }
+          next.push(1);
+          triangle.push(next);
+    }
+    return triangle;
+};

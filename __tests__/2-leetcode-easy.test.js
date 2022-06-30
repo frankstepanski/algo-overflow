@@ -13,6 +13,7 @@ import {
     maxSubArray,
     containsDuplicate,
     maxProfit,
+    climbStairs,
     pascalsTriangle,
 
 } from "../1-leetcode-easy";
@@ -142,6 +143,14 @@ it('maxProfilt - return highest profit from selling stock from array of stock pr
     expect(maxProfit([7,6,4,3,1])).toBe(0);
     // edge case:
     expect(maxProfit([])).toBe(null);
+}); 
+
+it('climbStairs - given number of steps return the number of distinct ways to climb', () => {
+
+    expect(climbStairs(2)).toBe(2);
+    expect(climbStairs(3)).toBe(3);
+    // edge case:
+    expect(climbStairs(0)).toBe(1);
 }); 
 
 it('pascalsTriangle - given a number, return array of Pascals triangle', () => {

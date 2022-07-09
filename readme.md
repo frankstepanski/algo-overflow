@@ -1,7 +1,6 @@
 # Algo Overflow
 
 - Week 0 (Prep)
-  - Frontend Refresher Resources
   - Understanding Imposter Syndrome
   - Pair Programming Tips
   - How to ask good questions
@@ -101,6 +100,7 @@
 - Week 8
   - Leetcode medium
     - Valid Sudoku
+    - Coin Change
     - Number of Islands
     - Shortest Path in Binary Matrix
     - Rotate Image

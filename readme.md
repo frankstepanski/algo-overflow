@@ -16,6 +16,8 @@
 - Week 1
   - Leetcode Easy 
     - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
+    - [Number of Good Pairs] (https://leetcode.com/problems/number-of-good-pairs/)
+    - [Length of Last Word] (https://leetcode.com/problems/length-of-last-word/)
     - [Add Digits](https://leetcode.com/problems/add-digits/)
     - [Two Sum](https://leetcode.com/problems/two-sum/)
     - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)

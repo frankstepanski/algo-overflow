@@ -93,15 +93,19 @@ const _twoSum = (arr, target) =>{
 // hash map:
 export const twoSum = (nums, target) =>{
     // store target - num in hash map, index of num in arr in hash map
-    // [1,5,9), 10] => {1:0, 5:1} => Last element matches target - num (1)
-    let hashMap = {}; 
+    // [1,5,9), 10] => {1:true, 5:true} => Last element matches target - num (1)
+    const hash = {}; 
+  
     for (let i = 0; i < nums.length; i++) {
         let diff = target - nums[i];
-        if (hashMap[diff] !== undefined) {
-            return [hashMap[diff], i];
+        // using !== undefined because a 0 key value evaluates to false
+        if (hash[diff] !== undefined) { 
+            return [hash[diff], i];
         }
-        hashMap[nums[i]] = i;
+        hash[nums[i]] = i;
     }
+
+    return [];
 }
 
 /*
@@ -394,7 +398,6 @@ export const shuffle = function(nums, n) {
     
     return result;
 };
-
 
 /*
 

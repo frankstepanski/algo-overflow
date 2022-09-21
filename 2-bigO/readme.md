@@ -2,6 +2,7 @@
 
 - [BigO Cheatsheet](https://www.bigocheatsheet.com/)
 - [How to learn Data Structures and Algorithms](https://www.youtube.com/watch?v=j9FD_Y5JTbw)
+- [Learning Aglorithms and Data Structures Roadmap](https://www.youtube.com/watch?v=eQObpgYUwxM)
 - [BigO - Part 1](https://www.youtube.com/watch?v=HfIH3czXc-8)
 - [BigO - Part 2](https://www.youtube.com/watch?v=zo7YFqw5hNw)
 - [Asymptotic Measures](https://www.youtube.com/watch?v=J56ggSnbyKY)

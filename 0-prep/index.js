@@ -199,13 +199,17 @@ Solve this without using any built-in array methods.
 */
 
 export const maxValue = (nums) => {
-  let largest = nums[0]
+  // it's good practice to use the first element array as starting value
+  // note: if you don't use first value, then use = -Infinity
+  //       -Infinity is a number that is less than any other number
+
+  let maximum = nums[0]; 
   
-  for (let i=0; i < nums.length; i++) {
-    if (nums[i] > largest) largest = nums[i];
+  for (let num of nums) {
+    if (num > maximum) maximum = num;
   }
   
-  return largest;
+  return maximum;
 };
 
 /*
